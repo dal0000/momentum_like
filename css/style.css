@@ -9,6 +9,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100vh;
 }
 #weather{
     width: 100vw-20px;
@@ -17,34 +18,23 @@ body {
     align-items: end;
     padding: 10px;
 }
-#greeting{
-    margin:0;
-}
 #greeting-clock, #todos{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
-#login-or-greeting {
-    font-size: 2rem;
-    position: absolute;
-    top: 20%;
+#greeting {
+    font-size: 5vh;
+    margin:0;
 }
 #clock {
-    font-size: 8rem;
-    position: absolute;
-    top: 20%;
+    font-size: 10vh;
+    margin: 0;
 }
-#todos {
-    width: 100vw;
-    position: absolute;
-    top: 50%;
-}
-
 #todo-list {
     padding: 0;
-    max-height: 35vh;
+    max-height: 40vh;
     overflow: auto;
 }
 #todo-list li{
@@ -58,10 +48,6 @@ body {
 }
 #quotes{
     text-align: center;
-    position: absolute;
-    bottom: 0%;
-    right: 50%;
-    transform:translateX(50%);
 }
 
 input{
@@ -75,7 +61,7 @@ input{
 }
 
 button{
-    background-color: #FFFFFF;
+    background-color: #FFFFFF;  
     border: 1px solid 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -103,31 +89,20 @@ button:active {
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
 }
-@media(max-height:1200px){
-    #login-or-greeting, #clock, #todos{
-        margin: 20px 0 0 0;
-        position: static;
-    }
-    #greeting-clock {
-        font-size: 3vh;
-    }
-    #todo-list{
-        max-height: 30vh;
-    }
-    #login-or-greeting{
-        font-size: 3vh;
-    }
-    #clock{
-        font-size: 10vh;
-    }
-}
 @media(max-height:620px){
     #quotes{
         display: none;
     }
+    #greeting {
+        font-size: 1.9rem;
+    }
+    #clock {
+        font-size: 3.8rem;
+    }
 }
 @media(max-height:450px){
-    div#todos{
+    #todos{
         display:none;
     }
+   
 }
